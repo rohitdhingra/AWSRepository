@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "79984569-d571-42fb-bd04-0392b54c63c3",
+		"name": "DynamoDBCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:5000/savePerson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Rahul\",\r\n    \"email\":\"rahul.dhingra83@gmail.com\",\r\n    \"age\":37,\r\n    \"address\":{\r\n        \"city\":\"Mumbai\",\r\n        \"state\":\"Maharastra\",\r\n        \"pinCode\":\"400001\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/savePerson",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"savePerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/editPerson",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"personId\": \"ca6fa4ef-b090-40dc-9185-bb32ea54fa06\",\r\n    \"name\": \"Rahul\",\r\n    \"age\": 38,\r\n    \"email\": \"rahul.dhingra83@gmail.com\",\r\n    \"address\": {\r\n        \"city\": \"Mumbai\",\r\n        \"state\": \"Maharastra\",\r\n        \"pinCode\": 400001\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/editPerson",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"editPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/deletePerson",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"personId\": \"ca6fa4ef-b090-40dc-9185-bb32ea54fa06\",\r\n    \"name\": \"Rahul\",\r\n    \"age\": 38,\r\n    \"email\": \"rahul.dhingra83@gmail.com\",\r\n    \"address\": {\r\n        \"city\": \"Mumbai\",\r\n        \"state\": \"Maharastra\",\r\n        \"pinCode\": 400001\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/deletePerson",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"deletePerson"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

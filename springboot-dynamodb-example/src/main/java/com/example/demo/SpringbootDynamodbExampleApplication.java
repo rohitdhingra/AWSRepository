@@ -27,7 +27,7 @@ public class SpringbootDynamodbExampleApplication {
 		return repository.addPerson(person);
 	}
 	
-	@GetMapping("/getPerson/{personID}")
+	@GetMapping("/getPerson/{personId}")
 	public Person getPerson(@PathVariable String personId)
 	{
 		return repository.findPersonByPersonId(personId);

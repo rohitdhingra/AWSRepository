@@ -12,11 +12,11 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 
 @Configuration
 public class DynamoDBConfig {
-	private static final String SECRET_KEY = "";
-	private static final String ACCESS_KEY = "";
-	private static final String REGION = "";
-	private static final String SERVICE_ENDPOINT = "";
-
+	private static final String SECRET_KEY = "eBAFkVOMgNLPQelJNPpcVq/cGgrnUJRdFT2wP6iy";
+	private static final String ACCESS_KEY = "AKIAV2RF7IVORNYA3HXW";
+	private static final String REGION = "us-east-2";
+	private static final String SERVICE_ENDPOINT = "dynamodb.us-east-2.amazonaws.com";
+	
 	@Bean
 	public DynamoDBMapper mapper() {
 		return new DynamoDBMapper(awsDynamoDBConfig());

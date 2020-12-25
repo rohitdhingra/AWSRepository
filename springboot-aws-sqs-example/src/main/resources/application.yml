@@ -3,8 +3,8 @@ cloud:
     region:
       auto: false
       static: us-east-2
-    credentials:      access-key: 
-      secret-key: 
+    credentials:      access-key: AKIAV2RF7IVO5YZ2ETHH
+      secret-key: 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
     end-point:
       uri: https://sqs.us-east-2.amazonaws.com/400585344349/awsSNSQueue
       

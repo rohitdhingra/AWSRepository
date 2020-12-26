@@ -10,6 +10,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent;
 import com.example.demo.domain.Order;
 import com.example.demo.repository.OrderDao;
 
@@ -25,8 +26,9 @@ public class SpringbootAwsLambdaApplication {
 	}
 
 	@Bean
-	public Function<String, List<Order>> findOrderByName() {
-		return (input) -> orderDao.buildOrders().stream().filter(order -> order.getName().equals(input))
+	public Function<APIGatewayProxyRequestEvent, List<Order>> findOrderByName() {
+		return (requestEvent) -> orderDao.buildOrders().stream()
+				.filter(order -> order.getName().equals(requestEvent.getQueryStringParameters().get("orderName")))
 				.collect(Collectors.toList());
 	}
 
